@@ -1,0 +1,13 @@
+<apex:page standardController="Account" extensions="savingAtsametime">
+<apex:form >
+<apex:pageBlock title="AccountData">
+<apex:pageBlockSection columns="2">
+<apex:inputField value="{!Account.Name}"/>
+<apex:inputField value="{!Account.Rating}"/>
+<apex:inputField value="{!Account.phone}"/>
+<apex:commandButton value="save" action="{!save}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

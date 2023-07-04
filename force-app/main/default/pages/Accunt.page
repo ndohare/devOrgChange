@@ -1,0 +1,48 @@
+<apex:page standardController="Contact">
+  <!-- Page Header -->
+  <apex:sectionHeader title="Contact Edit" subtitle="New Member" />
+  <apex:image value="http://bit.ly/17iLknp" styleClass="logo" />
+  <!-- Begin Form -->
+  <apex:form >
+    <apex:pageBlock title="Rules of SFDC99" mode="edit">
+      <!-- Rules -->
+      <apex:outputPanel styleClass="rules">
+        The 1st rule is: Just mind your own business.<br />
+        The 2nd rule is: what you are upto lets find.<br />
+        The 3rd rule is: Just follow 1st and 2nd rule.<br /><br />
+        <iframe width="320" height="180" src="https://www.youtube.com/embed/lsSC2vx7zFQ" />
+      </apex:outputPanel>
+      <!-- Fields -->
+      <apex:pageBlockSection columns="3" showHeader="true" title="Membership Status">
+       <!--<apex:inputField value="{!contact.Status__c}" required="true" /> -->
+        <apex:inputField value="{!contact.FirstName}" required="true" />
+        <apex:inputField value="{!contact.LastName}"  required="true" />
+        <apex:inputField value="{!contact.Phone}" required="true"/>
+        <!--<apex:inputField value="{!contact.Likes_Ice_Cream__c}" />-->
+        <apex:inputField value="{!contact.Email}"     required="true" />
+       
+      </apex:pageBlockSection>
+      <!-- Button Section -->
+      <apex:pageBlockButtons location="bottom">
+        <apex:commandButton value="Add Member" action="{!save}" />
+        <apex:commandLink value="Back" target="https://www.sfdc99.com" />
+      </apex:pageBlockButtons>
+    </apex:pageBlock>
+  </apex:form>
+  <!-- CSS -->
+  <style>
+    .logo {
+      float: right;
+      width: 60px;
+      margin: -65px 20px 0 0;
+    }
+    .rules {
+      color: Blue;
+      font-size: 18px;
+      font-family: Courier;      
+      margin: 10px 0 10px 30px;
+      float: left;
+      width: 100%;
+    }
+  </style>
+</apex:page>

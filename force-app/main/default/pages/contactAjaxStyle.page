@@ -1,0 +1,15 @@
+<apex:page standardController="Contact">
+<apex:form >
+<apex:pageBlock title="contact detail">
+<apex:outputLink value="{!Contact.Name}"/>
+</apex:pageBlock>
+</apex:form>
+
+
+
+<apex:outputPanel id="detail">
+<apex:detail subject="{!$CurrentPage.parameters.cid}" relatedList="false" title="false"/>
+</apex:outputPanel>
+
+  
+</apex:page>

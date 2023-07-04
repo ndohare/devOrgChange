@@ -1,0 +1,25 @@
+<apex:page controller="exampleCon">
+    <apex:form >       
+        <apex:actionFunction name="sayHello" action="{!sayHello}" rerender="out" status="myStatus"/>
+    </apex:form>
+
+    <apex:outputPanel id="out">
+    <apex:outputText />
+    <apex:actionStatus startText="requesting..." id="myStatus">
+        <apex:facet name="stop">{!username}</apex:facet>
+    </apex:actionStatus>
+    </apex:outputPanel>
+            
+    <script>window.setTimeout(sayHello,2000)</script>            
+    <p><apex:outputText value="Clicked? {!state}" id="showstate" /></p> 
+            
+    <apex:outputPanel onclick="mtd('Yes!')" styleClass="btn"> 
+        Click Me 
+    </apex:outputPanel>
+    
+    <apex:form >
+    <apex:actionFunction action="{!methodOne}" name="mtd" rerender="showstate">
+        <apex:param name="firstParam" assignTo="{!state}" value="" />
+    </apex:actionFunction>
+    </apex:form>
+</apex:page>

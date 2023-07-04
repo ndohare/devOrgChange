@@ -1,0 +1,13 @@
+<apex:page standardController="Contact" extensions="savingAtsametime">
+<apex:form >
+<apex:pageBlock title="contact data">
+<apex:pageBlockSection columns="1">
+<apex:inputField value="{!Contact.FirstName}"/>
+<apex:inputField value="{!Contact.LastName}"/>
+<apex:inputField value="{!Contact.phone}"/>
+<apex:commandButton value="next" action="{!save}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

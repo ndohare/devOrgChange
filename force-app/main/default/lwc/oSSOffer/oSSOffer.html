@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="OCRM Offer" class="slds-align_absolute-center" style="height:15rem;width:50%;margin-left:30px"> 
+        <div class="recordTypes">
+            <h1>Investment Types</h1>
+            <lightning-radio-group name="Record Types"
+            options={option}
+            value={values}
+            type="radio"
+            onchange={handleRadioChange}></lightning-radio-group>
+            </div>
+   <!--<lightning-checkbox-group name="OCRM Offer"
+                              label="OCRM Offer"
+                              options={options}
+                              value={value}
+                              onchange={handleChange}></lightning-checkbox-group>-->
+<lightning-input type="checkbox" label="Promo Investment Offer" ></lightning-input><br/>
+ <lightning-input type="checkbox" label="MDF Investment Offer" onchange={handleChange}></lightning-input><br/>
+ <template if:true={areButtonsVisible}>
+    <div class="SubcategoryClass">
+        <h1>Subcategory</h1>
+        <lightning-radio-group name="SubCategory"
+                              options={options}
+                              value={value}
+                              type="radio"></lightning-radio-group><br/>
+       
+     <!--<lightning-button label="Product Category" onclick={navigateToProductOffer} variant="brand"></lightning-button>
+     <lightning-button label="SKU Level" variant="brand"></lightning-button>-->
+    </div>
+    </template>
+
+
+<lightning-input type="checkbox" label="Empty Offer"></lightning-input><br/>
+<!--<div class="slds-p-around_small">
+    Current Record ID : <strong>{recordId}</strong> <br/><br/>
+</div>-->
+
+<div class="ButtonClass">
+    <!--<div class="slds-align_absolute-center" style="height:5rem;width:50%;margin-left:50px">-->
+    <lightning-button label="Save" class="slds-var-m-around_medium" onclick={handleSave}></lightning-button>
+    <lightning-button label="Cancel" type="cancel" class="slds-var-m-around_medium" onclick={handleCancel}></lightning-button>
+</div>
+
+
+<!--<p>Selected Values are: {selectedValues}</p>-->
+</lightning-card>
+</template>

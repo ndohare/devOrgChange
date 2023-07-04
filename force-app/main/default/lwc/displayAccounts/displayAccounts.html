@@ -1,0 +1,18 @@
+<template>
+<lightning-datatable
+    key-field="id"
+    data={result}
+    columns={columns}
+		onrowselection={getSelectedColumn}								 
+    >
+</lightning-datatable>	
+		<template if:true= {displayTableTwo}>
+				<lightning-datatable
+          key-field="id"
+          data={dataDisplay}
+          columns={columns}
+	       	onrowselection={getSelectedColumn}								 
+    >
+</lightning-datatable>	
+		</template>
+</template>

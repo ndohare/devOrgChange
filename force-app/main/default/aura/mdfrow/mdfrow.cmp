@@ -1,0 +1,61 @@
+<!--Parent Lightning Compomemt-->
+<aura:component controller="mdfInsertController" Implements="flexipage:availableForAllPageTypes,force:hasRecordId,lightning:actionOverride" access="global">
+    <!--Init handler which is call doInit js function on component Load--> 
+    <!--  <aura:attribute name="recordId" type="String" />-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="parentRecordId" type="String" />
+    
+    <!--<p>{!v.parentRecordId}</p>-->
+    <aura:attribute name="opptyId" type="String"/>
+    
+    <!--Event handler for Add and Delete Row Event which is fire from Child Component-->    
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}"/>
+    <aura:handler name="AddRowEvt" event="c:AddNewRowEvt" action="{!c.addNewRow}"/>
+    
+    
+    <aura:attribute name="mdfList" type="MDF_Investment__c[]"/> 
+    
+      <!--<ltng:require styles="{!$Resource.modalCss}"/>-->
+    <div class="slds-modal__container">
+        <div class="slds-modal__header">
+         <h4 class="title slds-text-heading--medium">MDF Invetments</h4>
+      </div>
+        <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap ">
+            <!--Table Part-->           
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate">S.No</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="MDF Amount">MDF Amount</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Picklist">Planning Level</div>
+                        </th>
+                         <th scope="col">
+                            <div class="slds-truncate" title="MDF Investment Name">MDF Investment Name</div>
+                        </th>
+                        <th scope="col">
+                            <!-- <div class="slds-truncate" title="Opportunity">Opportunity</div>-->
+                            <div class="slds-truncate" title="LookUp Field">Opportunity</div>
+                        </th>
+                        
+                    </tr>
+                </thead>   
+                <tbody>
+                    <aura:iteration items="{!v.mdfList}" var="item" indexVar="index">
+                        <c:mdfrowItem mdfInstance="{!item}" rowIndex="{!index}" ParAttValue="{!v.parentRecordId}" opptyId="{!v.opptyId}"/>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+        <div class="slds-modal__footer">
+            <button class="slds-button slds-button_brand" onclick="{!c.Save}">Save</button>
+            <button class="slds-button slds-button_brand" onclick="{!c.Cancel}">Cancel</button>
+        </div>
+    </div>
+    
+    
+</aura:component>

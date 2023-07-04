@@ -1,0 +1,29 @@
+<apex:page standardController="Account">
+Account owner: {! Account.Owner.Name } <br/>
+    <apex:form >
+        <apex:pageBlock title="My Content" >
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!save}" value="Save"/>
+                </apex:pageBlockButtons>
+                
+                <apex:pageBlockSection title="My Content Section" columns="2">
+                    <apex:inputField value="{!account.name}"/>
+                    <apex:inputField value="{!account.site}"/>
+                    <apex:inputField value="{!account.type}"/>
+                    <apex:inputField value="{!account.accountNumber}"/>
+                </apex:pageBlockSection>
+             
+                <apex:pageBlockTable value="{!Account}" var="Tst">
+                    <apex:column value="{!Tst.name}"/>
+                    <apex:column value="{!Tst.site}"/>
+                    <apex:column value="{!Tst.type}"/>
+                    <apex:column value="{!Tst.accountNumber}"/>
+                </apex:pageBlockTable>
+                
+                <apex:pageBlockSection >
+                    {! $User.FirstName } {! $User.LastName }({! $User.Username })
+                    ({! IF($User.isActive, $User.Username, 'inactive') })
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

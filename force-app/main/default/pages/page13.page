@@ -1,0 +1,15 @@
+<apex:page standardController="Product__c" extensions="product">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockButtons >
+<apex:commandButton value="save" action="{!save}"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="Product Data">
+<apex:inputField value="{!Product__c.Product_name__c}"/>
+<apex:inputField value="{!Product__c.Category__c}"/>
+<apex:inputField value="{!Product__c.Expiry_date__c}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:page standardController="Ingredient__c">
+<apex:form >
+<apex:pageBlock title="Specific ingredient details">
+<apex:pageBlockTable value="{!Ingredient__c}" columns="1" var="i">
+<apex:column value="{!i.Ingredient_Name__c}"/>
+<apex:column value="{!i.Unit__c}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

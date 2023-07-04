@@ -1,0 +1,15 @@
+<apex:page standardController="Customar__c">
+<apex:form >
+<apex:pageblock >
+<apex:pageBlockSection title="Customer Details">
+<apex:pageBlockTable value="{!Customar__c}" var="C">
+<apex:column value="{!C.First_Name__c}"/>
+<apex:column value="{!C.Last_Name__c}"/>
+<apex:column value="{!C.Address__c}"/>
+<apex:column value="{!C.Phone__c}"/>
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+</apex:pageblock>
+</apex:form>
+  
+</apex:page>

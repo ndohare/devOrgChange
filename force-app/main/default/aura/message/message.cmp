@@ -1,0 +1,34 @@
+<aura:component>
+    <aura:attribute name="customMessage" type="String"/>
+    <aura:handler event="aura:Waiting" action="{!c.customMessage}"/>
+    <h1>Hello nikita</h1>
+      <aura:if isTrue='{!v.customMessage}'>
+    <lightning:buttonMenu alternativeText="wild"/>
+          <div class="red">loading</div>
+    <aura:set attribute="else">
+        <lightning:select name="options" label="status" class="styleBold" >
+            <div class="call">
+            <option value="H" label="High">High</option>
+            <option value="L" label="Low">Low</option>
+            <option value=" ">none</option>
+            </div>
+        </lightning:select>
+         <lightning:select name="options" label="Number" class="styleBold" >
+            <option value="1" label="One">One</option>
+            <option value="2" label="Two">Two</option>
+            <option value=" ">none</option>
+        </lightning:select>
+               
+         <lightning:buttonMenu alternativeText="nikita" />
+        
+     </aura:set>
+     </aura:if>
+    <th>Hello World
+        <tr>
+            welcome to virgin media
+        </tr>
+    </th>
+    <tr>
+   <lightning:button variant="save" label="save"/>
+    </tr>
+</aura:component>

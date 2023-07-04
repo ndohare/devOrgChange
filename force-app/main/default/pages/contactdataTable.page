@@ -1,0 +1,14 @@
+<apex:page standardController="Contact" recordSetVar="account">
+<apex:form >
+<apex:pageBlock title="Account Data">
+<apex:dataTable value="{!account}" var="a">
+<apex:column value="{!a.FirstName}"/>
+<apex:column value="{!a.LastName}"/>
+<apex:column value="{!a.phone}"/>
+<apex:column value="{!a.Homephone}"/>
+
+</apex:dataTable>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

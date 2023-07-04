@@ -1,0 +1,8 @@
+<aura:component>
+  <!-- Optional component attributes here -->
+  <!-- Optional HTML markup -->
+  <div class="container"> 
+    Hello world!
+    <!-- Other components -->
+  </div>
+</aura:component>

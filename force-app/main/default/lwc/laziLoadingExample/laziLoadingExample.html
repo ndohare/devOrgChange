@@ -1,0 +1,20 @@
+<template>
+    <div style="height:500px">
+    <lightning-datatable
+     key-field="Id" 
+     data={contacts}
+     columns={contactsColumns}
+     enable-infinite-loading
+     onloadmore={loadMoreData}
+     onrowselection={getSelectedName}
+     ></lightning-datatable>
+    </div>
+    
+    <template if:true={isNewTable}>
+        <lightning-datatable
+        key-field="Id" 
+        data={selectedContacts}
+        columns={contactsColumns}
+        ></lightning-datatable>
+    </template>
+</template>

@@ -1,0 +1,5 @@
+<apex:page contentType="text/plain/#account.txt" cache="false" standardController="Account" recordSetVar="accounts" tabstyle="account" sidebar="false">
+   <apex:repeat var="a" value="{!accounts}">
+       {!a.name}
+    </apex:repeat>
+</apex:page>

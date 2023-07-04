@@ -1,0 +1,17 @@
+<apex:page standardController="Order_details__c">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockButtons >
+<apex:commandButton action="{!save}" value="save"/>
+</apex:pageBlockButtons>
+
+<apex:pageBlockSection title="My remaing order details">
+<apex:inputField value="{!Order_details__c.Customer1__c}"/>
+<apex:inputField value="{!Order_details__c.Product__c}"/>
+<apex:inputField value="{!Order_details__c.order_name__c}"/>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

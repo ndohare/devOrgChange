@@ -1,0 +1,6 @@
+<apex:page controller="MyController2" tabStyle="Account">
+    <apex:pageBlock title="Hello {!$User.FirstName}!">
+        This is your new page for the {!name} controller. <br/>
+        You are viewing the {!account.name} account.
+    </apex:pageBlock>
+</apex:page>

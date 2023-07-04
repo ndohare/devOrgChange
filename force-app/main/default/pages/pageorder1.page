@@ -1,0 +1,13 @@
+<apex:page standardController="Order_details__c">
+<apex:form >
+<apex:pageBlock title="Order Details">
+<apex:pageBlockTable value="{!Order_details__c}" var="o">
+<apex:column value="{!o.Category__c}"/>
+<apex:column value="{!o.Delivery_Date__c}"/>
+<apex:column value="{!o.Product__c}"/>
+<apex:column value="{!o.order_name__c}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

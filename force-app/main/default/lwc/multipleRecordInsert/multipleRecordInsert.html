@@ -1,0 +1,74 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <!--<lightning-icon icon-name="standard:timesheet" alternative-text="Event" size="small"></lightning-icon>-->
+            Bulk MDF Investment Creation
+        </h3>
+        <template for:each={itemList} for:item="item" for:index="index">
+            <lightning-record-edit-form key={item.id} object-api-name="MDF_Investment__c">
+                <lightning-messages> </lightning-messages>
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="MDF_Amount__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Planning_Level__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Name" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>-->
+                   
+                    <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Opportunity__c" variant="label-stacked" value={oppName} disabled>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                   
+                    <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="CurrencyIsoCode" variant="label-stacked" value={oppCurrecy} disabled>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+             
+<template if:true={item.data1}>
+                    <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <div class="slds-p-top_medium">
+                            <lightning-icon icon-name="action:new" access-key={item.id} id={index}
+                                alternative-text="Add Row" size="small" title="Add Row" onclick={addRow}>
+                            </lightning-icon>
+                            </div>
+                            </lightning-layout-item>
+                            </template>
+<template if:false={item.data}>
+                    <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                            <div class="slds-p-top_medium">
+                            <lightning-icon icon-name="action:delete" access-key={item.id} id={index}
+                                alternative-text="Delete Row" size="small" title="Delete Row" onclick={removeRow}>
+                            </lightning-icon>
+                        </div>
+                    </lightning-layout-item>
+                </template>
+
+</lightning-layout>
+
+</lightning-record-edit-form>
+</template>
+</br>
+<lightning-layout>
+    <div class="slds-align_absolute-center">
+        <lightning-button variant="success" onclick={handleSubmit} name="submit" label="Save">
+        </lightning-button>
+        <lightning-button variant="success" onclick={handleCancel} name="Cancel" label="Cancel">
+        </lightning-button>
+    </div>
+</lightning-layout>
+</lightning-card>
+</template>

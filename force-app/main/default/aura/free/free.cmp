@@ -1,0 +1,24 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:isUrlAddressable">
+  <lightning:card title="Select Example" iconName="standard:default" class="slds-size_1-of-4" footer="card footer">
+      <div class="slds-form slds-form_vertical slds-p-around_medium">
+      <lightning:select label="Name">
+        <option value="test">Premium</option>
+      </lightning:select>
+      <lightning:select label="Color">
+        <option value="test">Space Gray</option>
+      </lightning:select>
+      <lightning:select label="Size">
+        <option value="test">X-Large</option>
+      </lightning:select>
+      <lightning:select label="Quantity">
+        <option value="test">10</option>
+      </lightning:select>
+      <lightning:select label="Weight">
+        <option value="test">10g</option>
+      </lightning:select>
+      <lightning:select label="Material">
+        <option value="test">Alumninum</option>
+      </lightning:select>
+    </div>
+  </lightning:card>
+</aura:component>

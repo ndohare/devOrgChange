@@ -1,0 +1,11 @@
+<apex:page StandardController="Room__c">
+ <apex:pageBlock title="Room Details">
+  <apex:pageBlockSection >
+   <apex:outputField value="{!Room__c.Bed_Type__c}"/>
+   <apex:outputField value="{!Room__c.Rate__c}"/>
+   <apex:outputField value="{!Room__c.Room_Type__c}"/>
+   <apex:outputField value="{!Room__c.Status__c}"/>
+  </apex:pageBlockSection>
+ </apex:pageBlock>
+ 
+</apex:page>

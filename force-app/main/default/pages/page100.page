@@ -1,0 +1,18 @@
+<apex:page standardController="Order_details__c">
+<apex:form >
+<apex:pageBlock title="order details">
+<apex:pageBlockButtons >
+<apex:commandButton action="{!save}" value="save"/>
+</apex:pageBlockButtons>
+<apex:pageBlockTable value="{!Order_details__c}" var="or">
+<apex:column value="{!or.Customer1__c}"/>
+<apex:column value="{!or.Product__c}"/>
+<apex:column value="{!or.Category__c}"/>
+<apex:column value="{!or.Delivery_Date__c}"/>
+<apex:column value="{!or.order_name__c}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+
+  
+</apex:page>

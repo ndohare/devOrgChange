@@ -1,0 +1,7 @@
+<apex:page >
+    <style type="text/css">
+    .boldfont{font-weight:bold; color:red;}
+    </style>
+    <apex:outputlabel value="Name:" styleclass="boldfont"/>
+    Nikita Ashok
+</apex:page>

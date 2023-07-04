@@ -1,0 +1,11 @@
+<apex:page showHeader="true">
+  <apex:pageBlock >
+      <apex:pageBlockSection >
+            Hi there !
+      </apex:pageBlockSection>
+  
+    <apex:pageBlock >
+       This is your new page for the {!$User.FirstName} controller.
+    </apex:pageBlock>
+  </apex:pageBlock>
+</apex:page>

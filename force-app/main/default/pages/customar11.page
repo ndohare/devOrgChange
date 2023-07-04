@@ -1,0 +1,17 @@
+<apex:page standardController="Booking1__c">
+<apex:form >
+<apex:pageblock >
+<apex:pageBlockSection title="customer detail">
+<apex:pageBlockTable value="{!Booking1__c}" var="B">
+<apex:column value="{!B.Room__c}"/>
+<apex:column value="{!B.Customar__c}"/>
+<apex:column value="{!B.Check_in_date__c}"/>
+<apex:column value="{!B.Check_out_date__c}"/>
+
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+
+</apex:pageblock>
+</apex:form>
+  
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="DemoController">
+   <apex:form >
+       <apex:pageBlock >
+             Click Inside this block
+             <apex:inputtext >
+            <apex:actionSupport event="onclick" action="{!DemoMethod}" rerender="pgblck"/>
+            </apex:inputtext>  
+       </apex:pageBlock>
+       <apex:pageblock id="pgblck">
+             <apex:outputText value="{!outValueSecond }"/>
+       </apex:pageblock>
+   </apex:form>
+</apex:page>

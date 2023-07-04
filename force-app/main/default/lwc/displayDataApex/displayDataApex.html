@@ -1,0 +1,13 @@
+<template>  
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+               Account Records
+        </h3>
+    
+    <template for:each={data} for:item="account">
+        <p key={account.id}>{account.Name}</p>
+
+    </template>
+</lightning-card>
+</template>
